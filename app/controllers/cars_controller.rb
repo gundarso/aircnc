@@ -6,6 +6,7 @@ class CarsController < ApplicationController
       @cars = Car.where(city: params[:search], type: params[:search], seats: params[:search])
     else
       @cars = Car.all
+    end
   end
 
   def show

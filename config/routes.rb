@@ -1,14 +1,8 @@
 Rails.application.routes.draw do
 
-  get 'users/new'
+  root 'cars#index'
 
-  get 'users/create'
-
-  get 'users/edit'
-
-  get 'users/update'
-
-  get 'users/destroy'
+  resources :users, only: [:new, :create, :edit, :update, :destroy]
 
   resources :reservations, only: [:show, :new, :create, :destroy]
 
