@@ -5,15 +5,18 @@ class ReservationsController < ApplicationController
   end
 
   def new
-    @reservation = Reservation.new(reservation_params)
+    @car = Car.find(params[:car_id])
+    @reservation = Reservation.new
   end
 
   def create
-    @reservation = Reservation.new(reservation_params)
+    @car = Car.find(params[:car_id])
+    @reservation = @car.reservations.build(reservation_params)
     if @reservation.save
       redirect_to reservations_show_path(@reservation)
     else
       render :new
+    end
   end
 
   def destroy

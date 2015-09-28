@@ -1,8 +1,18 @@
 Rails.application.routes.draw do
 
+  get 'users/new'
+
+  get 'users/create'
+
+  get 'users/edit'
+
+  get 'users/update'
+
+  get 'users/destroy'
+
   resources :reservations, only: [:show, :new, :create, :destroy]
 
-  resources :cars
+  resources :cars, only: [:index, :show, :new, :create, :destroy]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
