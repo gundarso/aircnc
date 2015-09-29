@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'welcome/index'
+
   devise_for :users
-  root 'cars#index'
+  root 'welcome#index'
 
   resources :users, only: [:new, :create, :edit, :update, :destroy]
 
