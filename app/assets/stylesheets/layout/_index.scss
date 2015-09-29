@@ -1,3 +1,7 @@
+@import "navbar";
+@import "footer";
+@import "utilities";
+
 * {
   box-sizing: border-box;
 }
@@ -8,4 +12,21 @@
 
 body {
     padding-top: 75px;
+}
+
+
+h3.color{
+    color:orange;
+    padding-top: 2%;
+}
+
+.search {
+ margin-top: -25%;
+padding-top: 43%;
+}
+.search .form-section{
+ background:rgba(0,0,0,0.6);
+ border: 2px solid #414141;
+ border-radius: 5px;
+ padding: 10px;
 }

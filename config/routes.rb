@@ -30,7 +30,7 @@ Rails.application.routes.draw do
   #   resources :products do
   #     member do
   #       get 'short'
-  #       post 'toggle'
+  #       post 'toggle
   #     end
   #
   #     collection do

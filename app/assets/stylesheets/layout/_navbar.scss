@@ -1,24 +1,19 @@
 /* -------------------------------------
  * Colors & Fonts
  * ------------------------------------- */
-$navbar-color: $gray-light;
+$navbar-color: black;
 $navbar-hover-color: $yellow;
-$navbar-font-family: $navbar-font;
-$navbar-font-size: 14px;
-$navbar-text-transform: capitalize;
-$navbar-font-weight: 300;
-$navbar-letter-spacing: 1.5px;
-$navbar-font-family: $navbar-font;
-$navbar-bg: rgba(255,255,255,0.95);
+$navbar-font-family: $header-font;
+$navbar-bg: white;
 
 /* -------------------------------------
  * Box model
  * ------------------------------------- */
 $navbar-height: 50px;
-$navbar-vertical-padding: 10px;
+$navbar-vertical-padding: 5px;
 $navbar-horizontal-padding: 20px;
-$navbar-border-bottom-width: 1px;
-$navbar-border-bottom-color: $gray-lighter;
+$navbar-border-bottom-width: 0;
+$navbar-border-bottom-color: grey;
 
 /* -------------------------------------
  * Navbar button
@@ -39,26 +34,16 @@ $navbar-profile-border-width: 2px;
 /* -------------------------------------
  * SCSS code
  * ------------------------------------- */
-
-.navbar-wagon {
+.navbar-bootstrap-wagon {
   background: $navbar-bg;
   font-family: $navbar-font-family;
   border: none;
-  font-size: $navbar-font-size;
-  text-transform: $navbar-text-transform;
-  font-weight: $navbar-font-weight;
-  letter-spacing: $navbar-letter-spacing;
+  font-weight: 400;
   padding-left: $navbar-horizontal-padding;
   padding-right: $navbar-horizontal-padding;
   border-bottom: $navbar-border-bottom-width solid $navbar-border-bottom-color;
   min-height: 0;
-  -webkit-transition: background 0.4s ease, opacity 0.4s ease;
-     -moz-transition: background 0.4s ease, opacity 0.4s ease;
-      -ms-transition: background 0.4s ease, opacity 0.4s ease;
-          transition: background 0.4s ease, opacity 0.4s ease;
-  opacity: 1;
-  animation-name: fade-out;
-  animation-duration: 5s;
+  transition: background 0.4s ease;
 
   .navbar-nav > li > a,
   .navbar-nav > .open > a,
@@ -147,7 +132,7 @@ $navbar-profile-border-width: 2px;
  * ------------------------------------- */
 
 @media screen and (max-width: 768px) {
-  .navbar-wagon {
+  .navbar-bootstrap-wagon {
     .navbar-brand img, .navbar-brand svg {
       height: 50px;
     }
