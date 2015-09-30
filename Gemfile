@@ -32,8 +32,10 @@ gem 'simple_form'
 # Geolocation
 gem 'geocoder'
 gem 'gmaps4rails'
-gem 'rails-assets-underscore'
 
+source 'https://rails-assets.org' do
+gem 'rails-assets-underscore'
+end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

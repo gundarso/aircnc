@@ -1,5 +1,6 @@
 GEM
   remote: https://rubygems.org/
+  remote: https://rails-assets.org/
   specs:
     actionmailer (4.2.4)
       actionpack (= 4.2.4)
@@ -184,7 +185,7 @@ DEPENDENCIES
   pg
   puma
   rails (= 4.2.4)
-  rails-assets-underscore
+  rails-assets-underscore!
   rails_12factor
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
