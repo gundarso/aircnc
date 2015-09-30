@@ -32,7 +32,12 @@ gem 'simple_form'
 # Geolocation
 gem 'geocoder'
 gem 'gmaps4rails'
+source 'https://rails-assets.org' do
 gem 'rails-assets-underscore'
+end
+
+gem 'momentjs-rails', '>= 2.9.0'
+gem 'bootstrap3-datetimepicker-rails', '~> 4.15.35'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -60,4 +65,3 @@ gem 'rails_12factor', group: :production
 
 gem 'puma',           group: :production
 
-gem 'simple_form'

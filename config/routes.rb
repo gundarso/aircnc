@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   resources :cars, only: [:index, :show, :new, :create, :destroy]
 
-    root 'welcome#index'
+  root 'welcome#index'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
