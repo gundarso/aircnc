@@ -16,6 +16,10 @@ body {
     font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
+#bg-movie {
+  z-index: -1;
+}
+
 .text-vertical-center {
     display: table-cell;
     text-align: center;
