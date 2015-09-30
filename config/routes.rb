@@ -1,15 +1,15 @@
 Rails.application.routes.draw do
 
-  get 'welcome/index'
-
   devise_for :users
-  root 'welcome#index'
 
   resources :users, only: [:new, :create, :edit, :update, :destroy]
 
   resources :reservations, only: [:show, :new, :create, :destroy]
 
   resources :cars, only: [:index, :show, :new, :create, :destroy]
+
+    root 'welcome#index'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -30,7 +30,7 @@ Rails.application.routes.draw do
   #   resources :products do
   #     member do
   #       get 'short'
-  #       post 'toggle'
+  #       post 'toggle
   #     end
   #
   #     collection do

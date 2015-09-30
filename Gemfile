@@ -25,6 +25,15 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 #Devise
 gem 'devise'
 
+gem 'bootstrap-sass'
+gem 'font-awesome-sass'
+gem 'simple_form'
+
+# Geolocation
+gem 'geocoder'
+gem 'gmaps4rails'
+gem 'rails-assets-underscore'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
