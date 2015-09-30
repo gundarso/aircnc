@@ -11,8 +11,6 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -25,7 +23,7 @@
 
   <%= render "shared/footer" %>
 
-
+<%= javascript_include_tag "application" %>
   <%= javascript_include_tag "https://google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js" %>
   <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?libraries=places&amp;key=AIzaSyDiLbha2ADV-c4IjSgjFFCj01FcwrOHteI" %>
 
