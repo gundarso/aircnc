@@ -4,9 +4,9 @@ Rails.application.routes.draw do
 
   resources :users, only: [:new, :create, :edit, :update, :destroy]
 
-  resources :reservations, only: [:show, :new, :create, :destroy]
-
-  resources :cars, only: [:index, :show, :new, :create, :destroy]
+  resources :cars, only: [:index, :show, :new, :create, :destroy] do
+      resources :reservations
+  end
 
     root 'welcome#index'
 
