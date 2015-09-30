@@ -1,2 +1,18 @@
 <h1>Cars#new</h1>
 <p>Find me in app/views/cars/new.html.erb</p>
+
+<%= simple_form_for @car do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :type %>
+    <%= f.input :year %>
+    <%= f.input :mileage %>
+    <%= f.input :fuel %>
+    <%= f.input :seats %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
