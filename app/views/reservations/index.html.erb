@@ -1,2 +1,14 @@
 <h1>Reservations#index</h1>
-<p>Find me in app/views/reservations/index.html.erb</p>
+
+<ul>
+  <% @car.reservations.each do |reservation| %>
+    <li><strong>Checkin:</strong> <%= reservation.checkin %></li>
+    <li><strong>Checkout:</strong> <%= reservation.checkout %></li>
+    <li><strong>City:</strong> <%= @car.city %></li>
+    <li><strong>Category:</strong> <%= @car.category.name %></li>
+    <li><strong>Year:</strong> <%= @car.year %></li>
+    <li><strong>Mileage:</strong> <%= @car.mileage %></li>
+    <li><strong>Number of seats:</strong> <%= @car.seats %></li>
+    <%= image_tag @car.picture.url(:medium) %><br>
+  <% end %>
+</ul>
