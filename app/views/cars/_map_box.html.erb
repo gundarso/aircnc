@@ -1,5 +1,4 @@
 <div class="map_box">
-  <h3><%= car.description %></h3>
-  <p><%= car.address %></p>
-  <%= link_to "Book me!", car_path(car), class: "btn btn-warning" %>
+  <h3><%= car.city %></h3>
+  <%= link_to "Book me!", new_car_reservation_path(car), class: "btn btn-warning" %>
 </div>

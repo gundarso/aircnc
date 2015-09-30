@@ -8,9 +8,9 @@ class CarsController < ApplicationController
       @cars = Car.all
     end
     @markers = Gmaps4rails.build_markers(@cars) do | car, marker |
-      marker.lat car.latitude
-      marker.lng car.longitude
-      marker.infowindow render_to_string(partial: "/cars/map_box", locals: { car: car })
+     marker.lat car.latitude
+     marker.lng car.longitude
+     marker.infowindow render_to_string(partial: "/cars/map_box", locals: { car: car })
     end
   end
 

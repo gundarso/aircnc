@@ -12,11 +12,11 @@
                 <%#= image_tag ("default.jpg"), height: '180', width: '250' %>
               <%# end %>
               <div class="caption">
-                <p><%= car.description %></p>
-                <p><%= "#{car.locality}, #{car.country}" %></p>
-                <p><span class="label label-info price-label"><%= car.night_rate %> €</span></p>
-                <p>
-                  Ratings:
+                <p><%= car.category_id %></p>
+                  <p><%= "#{car.city}" %></p>
+                  <p><span class="label label-info price-label"><%= car.fuel %> €</span></p>
+                  <p>
+                   Ratings:
                   <i class="fa fa-star"></i>
                   <i class="fa fa-star"></i>
                   <i class="fa fa-star"></i>
