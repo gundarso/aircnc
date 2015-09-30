@@ -9,4 +9,6 @@ class Car < ActiveRecord::Base
 
   validates_attachment_content_type :picture,
     content_type: /\Aimage\/.*\z/
+  geocoded_by :city
+  after_validation :geocode, if: :city_changed?
 end
