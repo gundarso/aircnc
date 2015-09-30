@@ -1,2 +1,10 @@
 <h1>Cars#show</h1>
-<p>Find me in app/views/cars/show.html.erb</p>
+
+<strong>City:</strong> <%= @car.city %><br>
+<strong>Category:</strong> <%= @car.category.name %><br>
+<strong>Year:</strong> <%= @car.year %><br>
+<strong>Mileage:</strong> <%= @car.mileage %><br>
+<strong>Number of seats:</strong> <%= @car.seats %><br>
+
+<%= link_to 'Reserve this car', new_reservation_path(@car), class: "btn btn-primary" %>
+<%= link_to 'Back to search results', cars_path, class: "btn btn-primary" %>
