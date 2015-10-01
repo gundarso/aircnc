@@ -17,7 +17,7 @@ class ReservationsController < ApplicationController
     if user_signed_in?
       @reservation = @car.reservations.build(reservation_params)
         if @reservation.save
-          redirect_to car_path(@car), notice: "Your reservation has been successful"
+          redirect_to cars_path, notice: "Your reservation has been successful"
         else
           render :new
         end
