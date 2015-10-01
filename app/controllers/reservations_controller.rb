@@ -14,11 +14,15 @@ class ReservationsController < ApplicationController
   end
 
   def create
-    @reservation = @car.reservations.build(reservation_params)
-    if @reservation.save
-      redirect_to car_path(@car), notice: "Your reservation has been successful"
+    if user_signed_in?
+      @reservation = @car.reservations.build(reservation_params)
+        if @reservation.save
+          redirect_to car_path(@car), notice: "Your reservation has been successful"
+        else
+          render :new
+        end
     else
-      render :new
+      redirect_to cars_path, notice: "You have to be signed in to make a reservation"
     end
   end
 
