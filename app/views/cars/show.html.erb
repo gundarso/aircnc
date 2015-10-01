@@ -5,6 +5,7 @@
 <strong>Year:</strong> <%= @car.year %><br>
 <strong>Mileage:</strong> <%= @car.mileage %><br>
 <strong>Number of seats:</strong> <%= @car.seats %><br>
+<strong>Rate per day:</strong> <%= @car.rate %><br>
 <%= image_tag @car.picture.url(:medium) %><br>
 
 <%= link_to 'Reserve this car', new_car_reservation_path(@car), class: "btn btn-primary" %>
