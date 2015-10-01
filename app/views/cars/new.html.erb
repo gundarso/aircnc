@@ -9,7 +9,7 @@
     <%= f.input :year %>
     <%= f.input :mileage %>
     <%= f.input :fuel, as: :select, collection: ['petrol', 'diesel', 'hybrid', 'electric'] %>
-    <%= f.input :seats %>
+    <%= f.input :seats, input_html: { min: 0 } %>
     <%= f.input :rate %>
     <%= f.input :picture %>
   </div>
