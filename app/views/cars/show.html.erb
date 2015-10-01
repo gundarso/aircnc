@@ -1,12 +1,20 @@
-<h1>Cars#show</h1>
+
+<div class="row">
+<div class="container text-center">
+  <h1>Cars show</h1>
+    <h3><em>Here is the car you are looking for :</em></h3>
 
 <strong>City:</strong> <%= @car.pickup_address %><br>
 <strong>Category:</strong> <%= @car.category.name %><br>
 <strong>Year:</strong> <%= @car.year %><br>
 <strong>Mileage:</strong> <%= @car.mileage %><br>
 <strong>Number of seats:</strong> <%= @car.seats %><br>
-<strong>Rate per day:</strong> <%= @car.rate %><br>
+<strong>Price per day:</strong> <%= @car.rate %><br>
 <%= image_tag @car.picture.url(:medium) %><br>
 
 <%= link_to 'Reserve this car', new_car_reservation_path(@car), class: "btn btn-primary" %>
 <%= link_to 'Back to search results', cars_path, class: "btn btn-primary" %>
+
+</div>
+</div>
+
