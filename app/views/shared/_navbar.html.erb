@@ -12,6 +12,7 @@
     </form>
     <hr>
     <% if user_signed_in? %>
+      <%= link_to t(".top_call_to_action", default: "List my car!"), new_car_path, class: "navbar-wagon-item navbar-wagon-button btn" %>
       <%= link_to "#", class: "navbar-wagon-item navbar-wagon-link hidden-xs" do %>
         <div class="icon-badge-container">
           <i class="fa fa-envelope-o"></i>
@@ -44,7 +45,5 @@
     <% else %>
       <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <% end %>
-    <hr>
-    <%= link_to t(".top_call_to_action", default: "List my car!"), new_car_path, class: "navbar-wagon-item navbar-wagon-button btn" %>
   </div>
 </nav>
