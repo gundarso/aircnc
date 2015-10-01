@@ -1,11 +1,11 @@
-Rails.application.routes.draw do
+  Rails.application.routes.draw do
 
-  devise_for :users
+  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
 
   resources :users, only: [:new, :create, :edit, :update, :destroy]
 
   resources :cars, only: [:index, :show, :new, :create, :destroy] do
-      resources :reservations
+  resources :reservations
   end
 
   root 'welcome#index'
@@ -66,3 +66,4 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 end
+
