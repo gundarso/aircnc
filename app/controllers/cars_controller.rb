@@ -3,7 +3,7 @@ class CarsController < ApplicationController
 
   def index
     if params[:search]
-      @cars = Car.where(city: params[:search])
+      @cars = Car.where(pickup_address: params[:search])
     else
       @cars = Car.all
     end
@@ -38,7 +38,7 @@ class CarsController < ApplicationController
   private
 
   def car_params
-    params.require(:car).permit(:city, :year, :mileage, :fuel, :seats, :rate, :category_id, :picture)
+    params.require(:car).permit(:pickup_address, :year, :mileage, :fuel, :seats, :rate, :category_id, :picture)
   end
 
   def find_car
