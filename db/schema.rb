@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150930160827) do
+ActiveRecord::Schema.define(version: 20151001093757) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,8 +21,8 @@ ActiveRecord::Schema.define(version: 20150930160827) do
     t.integer  "mileage"
     t.string   "fuel"
     t.integer  "seats"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
+    t.datetime "created_at",                                   null: false
+    t.datetime "updated_at",                                   null: false
     t.string   "city"
     t.integer  "category_id"
     t.string   "picture_file_name"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20150930160827) do
     t.datetime "picture_updated_at"
     t.float    "latitude"
     t.float    "longitude"
+    t.decimal  "rate",                 precision: 7, scale: 2
   end
 
   add_index "cars", ["category_id"], name: "index_cars_on_category_id", using: :btree
