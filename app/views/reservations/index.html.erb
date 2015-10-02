@@ -4,7 +4,7 @@
   <% @car.reservations.each do |reservation| %>
     <li><strong>Checkin:</strong> <%= reservation.checkin %></li>
     <li><strong>Checkout:</strong> <%= reservation.checkout %></li>
-    <li><strong>City:</strong> <%= @car.city %></li>
+    <li><strong>City:</strong> <%= @car.pickup_address %></li>
     <li><strong>Category:</strong> <%= @car.category.name %></li>
     <li><strong>Year:</strong> <%= @car.year %></li>
     <li><strong>Mileage:</strong> <%= @car.mileage %></li>
