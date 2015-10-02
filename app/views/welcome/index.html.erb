@@ -30,7 +30,7 @@
                       <div class="col-md-2">
                         <div class="form-group">
                           <label class="sr-only" for="location">Location</label>
-                          <input type="text" class="form-control" id="location" placeholder="From where ?" name="pickup_address">
+                          <input type="text" class="form-control" id="user_input_autocomplete_address" placeholder="From where ?" name="pickup_address">
                         </div>
                       </div>
                       <div class="col-md-2">
@@ -147,6 +147,12 @@
 
     <!-- /.container -->
 </section>
+
+  <script>
+  $(document).ready(function(){
+    $('body').addClass('main-page');
+  })
+  </script>
 
 <% content_for(:after_js) do %>
   <%= javascript_tag do %>
