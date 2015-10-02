@@ -3,17 +3,22 @@
 <%= simple_form_for @car do |f| %>
   <%= f.error_notification %>
 
-<div class= "sizee"
-  <div class="form-inputs">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3 text-left">
+      <div class="card-block shadowed-box text-center">
+        <div class= "sizee"
+          <div class="form-inputs">
     <%= f.input :pickup_address %>
     <%= f.association :category %>
     <%= f.input :year, as: :date, discard_day: true, discard_month: true %>
     <%= f.input :mileage %>
     <%= f.input :fuel, as: :select, collection: ['petrol', 'diesel', 'hybrid', 'electric'] %>
     <%= f.input :seats, input_html: { min: 0 } %>
-    <%= f.input :rate %>
+    <%= f.input :rate, label:"Price/day" %>
     <%= f.input :picture %>
   </div>
+</div>
+ </div>
 </div>
 <div class ="sizee">
   <div class="form-actions">
