@@ -13,7 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= bootstrap-sprocket
+//= require underscore
+//= require gmaps/google
 //= require moment
 //= require bootstrap-datetimepicker
-//= require turbolinks
 //= require_tree .
+

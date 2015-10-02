@@ -6,6 +6,8 @@
           <div class="col-sm-6 col-md-6 xs-padded">
             <div class="thumbnail">
               <div class="caption">
+                      <p><%= car.pickup_address %></p>
+
                   <% if car.picture.present? %>
                 <p><%= image_tag car.picture.url(:thumb) %></p>
               <% else %>
@@ -34,9 +36,9 @@
 
     <div class="col-xs-12 col-md-6 xs-padded">
       <!-- placeholder for the map -->
-      <div id="map" class="thumbnail" style="width: 100%; height: 900px;"></div>
-    </div>
-  </div>
+      <div id="map" class="thumbnail" style="width: 100%; height: 600px;"></div>
+    </div
+>  </div>
 </div>
 
 <% content_for(:after_js) do %>
