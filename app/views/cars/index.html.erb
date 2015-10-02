@@ -6,8 +6,6 @@
           <div class="col-sm-6 col-md-6 xs-padded">
             <div class="thumbnail">
               <div class="caption">
-                      <p><%= car.pickup_address %></p>
-
                   <% if car.picture.present? %>
                 <p><%= image_tag car.picture.url(:thumb) %></p>
               <% else %>
