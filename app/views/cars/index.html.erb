@@ -5,14 +5,13 @@
       <% @cars.each do | car | %>
           <div class="col-sm-6 col-md-6 xs-padded">
             <div class="thumbnail">
-              <%# if car.photos.present? %>
-                <%#= image_tag(accomodation.photos.sample.picture.url(:medium), height: '180', width: '250') %>
-              <%# else %>
-                <%#= image_tag ("default.jpg"), height: '180', width: '250' %>
-              <%# end %>
               <div class="caption">
-                <p><%= car.picture.url(:thumb) %></p>
-                  <p><%= "#{car.pickup_address}" %></p>
+                  <% if car.picture.present? %>
+                <p><%= image_tag car.picture.url(:thumb) %></p>
+              <% else %>
+                <p><%= image_tag ("aircnc.jpg"), height: '65', width: '100' %></p>
+              <% end %>
+                <p><%= "#{car.pickup_address}" %></p>
                   <p><span class="label label-info price-label"><%= car.rate %> €</span></p>
                   <p>
                    Ratings:
@@ -30,7 +29,7 @@
             </div>
           </div>
       <% end %>
-    </div>s
+    </div>
 
 
     <div class="col-xs-12 col-md-6 xs-padded">
