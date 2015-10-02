@@ -3,7 +3,7 @@ class CarsController < ApplicationController
 
   def index
     if params[:pickup_address].present?
-      @cars = Car.near(params[:pickup_address], 10)
+      @cars = Car.near(params[:pickup_address], 500)
     #if params[:search]
       #@cars = Car.where(pickup_address: params[:search])
     else
