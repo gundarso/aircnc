@@ -2,20 +2,26 @@ class CarsController < ApplicationController
   before_action :find_car, only: [:show, :destroy]
 
   def index
-    if params[:search]
-      @cars = Car.where(pickup_address: params[:search])
+    if params[:pickup_address].present?
+      @cars = Car.near(params[:pickup_address], 10)
+    #if params[:search]
+      #@cars = Car.where(pickup_address: params[:search])
     else
       @cars = Car.all
     end
-    @markers = Gmaps4rails.build_markers(@cars) do | car, marker |
+
+    @markers = Gmaps4rails.build_markers(@cars[0..9]) do | car, marker |
      marker.lat car.latitude
      marker.lng car.longitude
-     marker.infowindow render_to_string(partial: "/cars/map_box", locals: { car: car })
     end
+
   end
 
   def show
-  end
+    @car = Car.find(params[:id])
+    @car_coordinates = { lat: @car.latitude, lng: @car.longitude }
+end
+
 
   def new
     @car = Car.new
@@ -42,6 +48,6 @@ class CarsController < ApplicationController
   end
 
   def find_car
-    @car = Car.find(params[:id])
+   @car = Car.find(params[:id])
   end
 end
